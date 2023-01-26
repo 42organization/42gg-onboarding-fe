@@ -1,0 +1,17 @@
+@import 'styles/common.scss';
+
+.container {
+  @include modal-container;
+}
+
+.phrase {
+  @include modal-phrase;
+  .time {
+    margin-bottom: 0.5rem;
+    font-size: $giant-font;
+  }
+}
+
+.buttons {
+  @include select-buttons(6rem);
+}
