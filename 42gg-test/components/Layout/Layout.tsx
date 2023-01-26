@@ -13,6 +13,7 @@ import Header from './Header';
 import Footer from './Footer';
 import CurrentMatch from './CurrentMatch';
 import styles from 'styles/Layout/Layout.module.scss';
+import Admin from 'pages/admin';
 
 type AppLayoutProps = {
   children: React.ReactNode;
@@ -100,30 +101,27 @@ export default function AppLayout({ children }: AppLayoutProps) {
     }
   };
 
-  return (
+  return presentPath === '/admin' && user.isAdmin ? (
+    <div>
+      (
+      <Admin />)
+    </div>
+  ) : (
     <div className={styles.appContainer}>
       <div className={styles.background}>
-        <div>
-          {presentPath === '/statistics' && user.isAdmin ? (
-            <Statistics />
-          ) : (
-            user.intraId && (
-              <>
-                <Header />
-                {openCurrentMatch && <CurrentMatch />}
-                {presentPath !== '/match' && presentPath !== '/manual' && (
-                  <Link href='/match'>
-                    <div className={styles.buttonContainer}>
-                      <a className={styles.matchingButton}>🏓</a>
-                    </div>
-                  </Link>
-                )}
-                {children}
-                <Footer />
-              </>
-            )
+        <>
+          <Header />
+          {openCurrentMatch && <CurrentMatch />}
+          {presentPath !== '/match' && presentPath !== '/manual' && (
+            <Link href='/match'>
+              <div className={styles.buttonContainer}>
+                <a className={styles.matchingButton}>🏓</a>
+              </div>
+            </Link>
           )}
-        </div>
+          {children}
+          <Footer />
+        </>
       </div>
     </div>
   );

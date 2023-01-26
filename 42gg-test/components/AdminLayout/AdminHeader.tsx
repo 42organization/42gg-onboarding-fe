@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import styles from 'styles/statistics/StatisticsHeader.module.scss';
 
-export default function StatisticsHeader() {
+export default function AdminHeader() {
   return (
-    <div className={styles.headerWrap}>
-      <div id={styles.logo}>
+    <div style={{  }}>
+      <div >
         <Link href={'/'}>
           <div>42GG</div>
         </Link>

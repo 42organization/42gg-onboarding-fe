@@ -14,8 +14,6 @@ import { FiMenu } from 'react-icons/fi';
 import { BsMegaphone } from 'react-icons/bs';
 import { VscBell, VscBellDot } from 'react-icons/vsc';
 import styles from 'styles/Layout/Header.module.scss';
-import YoloModal from 'components/modal/adminProfile/adminProfileModal';
-// import { openYoloBarState } from 'utils/recoil/layout';
 import { modalState } from 'utils/recoil/modal';
 
 export default function Header() {
@@ -23,7 +21,6 @@ export default function Header() {
   const [live, setLive] = useRecoilState(liveState);
   const [openMenuBar, setOpenMenuBar] = useRecoilState(openMenuBarState);
   const [openNotiBar, setOpenNotiBar] = useRecoilState(openNotiBarState);
-  //   const [openYoloBar, setYoloBar] = useRecoilState(openYoloBarState);
 
   const setModal = useSetRecoilState(modalState);
   const openMenuBarHandler = () => {
@@ -34,10 +31,6 @@ export default function Header() {
     setOpenNotiBar(!openNotiBar);
     setLive((prev) => ({ ...prev, notiCount: 0 }));
   };
-
-  //   const openYoloBarHandler = () => {
-  //     setYoloBar(!openYoloBar);
-  //   }
 
   useEffect(() => {
     setMenuOutsideScroll();

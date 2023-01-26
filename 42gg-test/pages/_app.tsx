@@ -10,6 +10,7 @@ import LoginChecker from 'components/LoginChecker';
 import ModalProvider from 'components/modal/ModalProvider';
 import * as gtag from 'lib/gtag';
 import 'styles/globals.css';
+import Admin from './admin';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
