@@ -103,8 +103,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
   return presentPath === '/admin' && user.isAdmin ? (
     <div>
-      (
-      <Admin />)
+      <Admin />
     </div>
   ) : (
     <div className={styles.appContainer}>

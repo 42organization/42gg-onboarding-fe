@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from 'styles/statistics/StatisticsHeader.module.scss';
 
-export default function StatisticsHeader() {
+export default function StatisticscHeader() {
   return (
     <div className={styles.headerWrap}>
       <div id={styles.logo}>

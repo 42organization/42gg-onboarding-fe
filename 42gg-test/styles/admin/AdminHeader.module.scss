@@ -1,0 +1,79 @@
+@import 'styles/common.scss';
+
+.title {
+	--shadow-color: hsl(290, 89%, 82%);
+
+	font-size: clamp(5rem, 23vw + -0.1rem, 15rem);
+	letter-spacing: 1rem;
+	font-family: Gluten, Grandstander, cursive;
+  
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-color: black;
+	background-position: center;
+	color: transparent;
+	text-align: center;
+	filter: brightness(1.1) drop-shadow(-2px -2px 4px var(--shadow-color))
+	  drop-shadow(2px 8px 4px var(--shadow-color));
+	  -webkit-text-stroke: var(--shadow-color) 4px;
+
+	}
+
+.headerWrap{
+	background-color: white;
+}
+
+@font-face {
+	font-family: Gluten;
+	src: url("https://raw.githubusercontent.com/robole/artifice/main/bubble-text-image-background/fonts/Gluten-VariableFont.ttf");
+  }
+
+.leftNav {
+	width: 200px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	height: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.leftNavHeader {
+	padding: 20px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.leftNavList {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.leftNavList li {
+	padding: 20px;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.leftNavList li a {
+	color: #000;
+	text-decoration: none;
+	display: block;
+}
+
+.leftNavDropdown {
+	cursor: pointer;
+	position: relative;
+}
+
+.leftNavDropdown:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px;
+}

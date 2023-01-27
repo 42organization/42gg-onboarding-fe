@@ -1,12 +1,14 @@
-import AdminHeader from 'components/AdminLayout/AdminHeader';
+import AdminNavbar from 'components/AdminLayout/AdminNavbar';
+import AdminUserInfo from 'components/AdminLayout/AdminUserInfo';
 import { NextPage } from 'next';
 
 const Admin: NextPage = () => {
-	return (<>
-		< AdminHeader />
-		{/* <AdminSelect /> */}
-		</>);
-		
+  return (
+    <>
+      <AdminNavbar />
+	  <AdminUserInfo />
+    </>
+  );
 };
 
 export default Admin;
